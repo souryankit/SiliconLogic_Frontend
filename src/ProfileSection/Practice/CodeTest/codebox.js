@@ -4,6 +4,8 @@ import Select from 'react-select';
 import axios from 'axios';
 import styles from './CodeTest.module.css';
 
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE || process.env.REACT_APP_API_BASE || 'http://localhost:8080';
+
 const CodeTest = () => {
   const [selectedLanguage, setSelectedLanguage] = useState({
     value: 'verilog',
@@ -80,6 +82,81 @@ const CodeTest = () => {
   const [tbActiveFileId, setTbActiveFileId] = useState(1);
   const [tbRenamingFileId, setTbRenamingFileId] = useState(null);
   const [tbRenameDraft, setTbRenameDraft] = useState('');
+
+  // --- Helpers for backend /runs API ---
+  const toBackendFiles = (arr) => arr.map(f => ({ name: f.name, content: f.content ?? '' }));
+
+  const detectRunLanguage = (designFiles, testbenchFiles) => {
+    const anySV = [...designFiles, ...testbenchFiles].some(f => (f.extension || '').toLowerCase() === '.sv' || (f.language || '').includes('systemverilog'));
+    return anySV ? 'systemverilog' : 'verilog';
+  };
+
+  // Find the first 'module <name>' in the provided files, regardless of port list
+  const findTopModuleFromFiles = (files) => {
+    if (!Array.isArray(files)) return null;
+    // Regex matches: module <name> [#(...)] [ ( ... ) ] or ';'
+    const re = /\bmodule\s+([A-Za-z_]\w*)\b/gm;
+    for (const f of files) {
+      const text = f?.content || '';
+      const m = re.exec(text);
+      if (m && m[1]) return m[1];
+    }
+    return null;
+  };
+
+  async function submitRun({ language, files, topModule, timeoutSec = 15 }) {
+    const payload = {
+      language,
+      files,
+      top_module: topModule || 'tb',
+      timeout_sec: timeoutSec
+    };
+    const res = await axios.post(`${API_BASE}/runs`, payload);
+    return res.data.run_id || res.data.id || null;
+  }
+
+  async function pollRun(runId) {
+    // Poll until status is completed/failed
+    // Short, responsive polling with small backoff
+    const maxMs = 30000;
+    const start = Date.now();
+    let delay = 150;
+    while (true) {
+      const { data } = await axios.get(`${API_BASE}/runs/${runId}`);
+      if (data.status === 'completed' || data.status === 'failed') return data;
+      if (Date.now() - start > maxMs) return data; // give up and return last seen
+      await new Promise(r => setTimeout(r, delay));
+      delay = Math.min(delay * 1.5, 1000);
+    }
+  }
+
+  async function fetchStdout(runId) {
+    try {
+      const { data } = await axios.get(`${API_BASE}/runs/${runId}/stdout`);
+      return data.stdout ?? '';
+    } catch {
+      return '';
+    }
+  }
+
+  async function fetchStderr(runId) {
+    try {
+      const { data } = await axios.get(`${API_BASE}/runs/${runId}/stderr`);
+      return data.stderr ?? '';
+    } catch {
+      return '';
+    }
+  }
+
+  async function fetchArtifacts(runId) {
+    try {
+      const { data } = await axios.get(`${API_BASE}/runs/${runId}/artifacts`);
+      return data.artifacts || data || [];
+    } catch {
+      return [];
+    }
+  }
+  // --- End helpers ---
 
   const languageOptions = [
     { value: 'verilog', label: 'Verilog', extension: '.v', monaco: 'verilog' },
@@ -296,23 +373,45 @@ int main() {
   };
 
   const runCode = async () => {
-    if (!code.trim()) {
-      alert('Please write some code first!');
+    // Combine design + testbench for simulation
+    const design = files;
+    const tb = tbFiles;
+    if (design.length === 0 && tb.length === 0) {
+      alert('Please add at least one file.');
       return;
     }
+    // Use current editor contents for active files
+    const designWithActive = design.map(f => f.id === activeFileId ? { ...f, content: code } : f);
+    const tbWithActive = tb.map(f => f.id === tbActiveFileId ? { ...f, content: tbCode } : f);
+    const language = detectRunLanguage(designWithActive, tbWithActive);
+
+    // Infer top module from TB files first, then design files; fallback to 'tb'
+    const topModule =
+      findTopModuleFromFiles(tbWithActive) ||
+      findTopModuleFromFiles(designWithActive) ||
+      'tb';
 
     setIsRunningDesign(true);
-    setOutput('Running code...');
-
+    setOutput('Submitting run...');
+    setResults([]);
     try {
-      const response = await axios.post('/api/execute', {
-        language: selectedLanguage.value,
-        code: code,
-        testCases: testCases
+      const runId = await submitRun({
+        language,
+        files: toBackendFiles([...designWithActive, ...tbWithActive]),
+        topModule,
+        timeoutSec: 20
       });
+      if (!runId) throw new Error('No run_id returned');
 
-      setOutput(response.data.output);
-      setResults(response.data.results || []);
+      setOutput(`Run submitted: ${runId}\nWaiting for completion...`);
+      const finalRun = await pollRun(runId);
+      const [stdout, stderr, artifacts] = await Promise.all([
+        fetchStdout(runId),
+        fetchStderr(runId),
+        fetchArtifacts(runId),
+      ]);
+      setOutput(`Status: ${finalRun.status}\n\n----- STDOUT -----\n${stdout}\n\n----- STDERR -----\n${stderr}`);
+      setResults(artifacts);
     } catch (error) {
       setOutput(`Error: ${error.response?.data?.error || error.message}`);
     } finally {
@@ -321,45 +420,43 @@ int main() {
   };
 
   const submitCode = async () => {
-    if (!code.trim()) {
-      alert('Please write some code first!');
-      return;
-    }
-
-    setIsSavingDesign(true);
-
-    try {
-      const response = await axios.post('/api/submit', {
-        language: selectedLanguage.value,
-        code: code,
-        testCases: testCases
-      });
-
-      alert('Code submitted successfully!');
-      setOutput(response.data.message);
-    } catch (error) {
-      alert(`Submission failed: ${error.response?.data?.error || error.message}`);
-    } finally {
-      setIsSavingDesign(false);
-    }
+    await saveActiveFile();
+    alert('Code saved locally.');
   };
 
   // Testbench actions have their own independent states and handlers
   const tbRunCode = async () => {
-    if (!tbCode.trim()) {
-      alert('Please write some testbench code first!');
+    const design = files.map(f => f.id === activeFileId ? { ...f, content: code } : f);
+    const tb = tbFiles.map(f => f.id === tbActiveFileId ? { ...f, content: tbCode } : f);
+    if (tb.length === 0) {
+      alert('Please add a testbench file first!');
       return;
     }
+    const language = detectRunLanguage(design, tb);
+    const topModule =
+      findTopModuleFromFiles(tb) ||
+      findTopModuleFromFiles(design) ||
+      'tb';
+
     setIsRunningTestbench(true);
-    setOutput('Running testbench...');
+    setOutput('Submitting testbench run...');
+    setResults([]);
     try {
-      const response = await axios.post('/api/execute', {
-        language: tbSelectedLanguage.value,
-        code: tbCode,
-        testCases: testCases,
+      const runId = await submitRun({
+        language,
+        files: toBackendFiles([...design, ...tb]),
+        topModule,
+        timeoutSec: 20
       });
-      setOutput(response.data.output);
-      setResults(response.data.results || []);
+      if (!runId) throw new Error('No run_id returned');
+      const finalRun = await pollRun(runId);
+      const [stdout, stderr, artifacts] = await Promise.all([
+        fetchStdout(runId),
+        fetchStderr(runId),
+        fetchArtifacts(runId),
+      ]);
+      setOutput(`Status: ${finalRun.status}\n\n----- STDOUT -----\n${stdout}\n\n----- STDERR -----\n${stderr}`);
+      setResults(artifacts);
     } catch (error) {
       setOutput(`Error: ${error.response?.data?.error || error.message}`);
     } finally {
@@ -840,8 +937,23 @@ int main() {
             Results
           </div>
 
-          {/* <div className={styles.frameScrollable}> */}
-
+          <div className={styles.frameScrollable} style={{ padding: '12px', whiteSpace: 'pre-wrap' }}>
+            {output}
+            {Array.isArray(results) && results.length > 0 && (
+              <div style={{ marginTop: 12 }}>
+                <div style={{ fontWeight: 'bold', marginBottom: 6 }}>Artifacts</div>
+                <ul>
+                  {results.map((a, idx) => (
+                    <li key={idx}>
+                      <a href={a.url || a.download_url || '#'} target="_blank" rel="noreferrer">
+                        {a.filename || a.name || a.url}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
 
         </div>
 
