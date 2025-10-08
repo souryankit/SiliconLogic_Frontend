@@ -1,0 +1,76 @@
+/* Legacy styles - can be removed if not used elsewhere */
+.sideContent {
+    height: 100%;
+    width: 0vw;
+    position: absolute;
+    left: -74px;
+    transition: 0.2s;
+}
+
+.sideContent:hover {
+    left: -10px;
+}
+
+.rightside {
+    position: relative;
+    width: 100vw;
+    margin-left: 20px;
+}
+
+/* Main dashboard container */
+.dashboardContainer {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+    width: auto;
+    overflow-x:hidden;
+    background-color: #f8f9fa;
+}
+
+/* .mobileView {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+    width: auto;
+    overflow-x:hidden;
+    background-color: #f8f9fa;
+    flex-direction: column;
+} */
+
+/* Main content area - basic styles only (detailed styles in sidebar.css) */
+.mainContent {
+    flex: 1;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: #f8f9fa;
+    position: relative;
+    margin-left: 2vw;
+    padding: 4px;
+    transition: margin-left 0.3s ease-out;
+}
+
+/* Additional responsive adjustments specific to dashboard layout */
+@media screen and (min-width: 1200px) {
+    .dashboardContainer {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .dashboardContainer {
+        flex-direction: column;
+        position: relative;
+    }
+   
+    .mainContent {
+        width: 100%;
+        flex: 1;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .dashboardContainer {
+        min-height: 100vh;
+    }
+}
+  

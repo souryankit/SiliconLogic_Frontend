@@ -1,0 +1,160 @@
+.tab-link {
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #6c757d;
+  text-decoration: none;
+}
+
+.tab-link.active {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+}
+
+/* Rest of your existing notification styles */
+.ncontainer{
+  height: 600px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(33, 31, 84, 0.06);
+  margin-bottom: 20px;
+}
+.notification-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-primary-soft {
+  background-color: rgba(13, 110, 253, 0.1);
+}
+
+.bg-warning-soft {
+  background-color: rgba(255, 193, 7, 0.1);
+}
+
+.bg-success-soft {
+  background-color: rgba(25, 135, 84, 0.1);
+}
+
+.title h3{
+  font-size: 25px !important;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  line-height: 1.4em !important;
+  font-weight: 300;
+}
+
+ 
+/* alerts */
+
+.alert {
+  border: 0;
+  border-radius: 0;
+  padding: 20px 15px !important;
+  line-height: 20px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.alert .alert-icon {
+  display: block;
+  float: left;
+  margin-right: 1.071rem;
+}
+
+.alert b {
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.close {
+  float: right;
+  font-size: 1.5rem;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .5;
+}
+.alert .close {
+  color: #fff;
+  text-shadow: none;
+  opacity: .9;
+}
+.alert .close i {
+  font-size: 20px;
+}
+.alert .close:hover{
+  opacity: 1;
+  color: #fff;
+}
+.alert.alert-info {
+  background-color: #00cae3;
+  color: #fff;
+}
+
+.alert.alert-success {
+  background-color: #55b559;
+  color: #fff;
+}
+
+.alert.alert-warning {
+  background-color: #ff9e0f;
+  color: #fff;
+}
+
+.alert.alert-danger {
+  background-color: #f55145;
+  color: #fff;
+}
+
+.alert.alert-primary {
+  background-color: #a72abd;
+  color: #fff;
+}
+
+.notification-icon {
+width: 40px;
+height: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.bg-primary-soft {
+background-color: rgba(13, 110, 253, 0.1);
+}
+
+.bg-warning-soft {
+background-color: rgba(255, 193, 7, 0.1);
+}
+
+.bg-success-soft {
+background-color: rgba(25, 135, 84, 0.1);
+}
+
+.notification-card {
+transition: transform 0.2s ease;
+}
+
+.notification-card:hover {
+transform: translateY(-2px);
+}
+
+.notification-actions {
+opacity: 0;
+transition: opacity 0.2s ease;
+}
+
+.notification-card:hover .notification-actions {
+opacity: 1;
+}
+
+@media (max-width: 768px) {
+.notification-actions {
+  opacity: 1;
+}
+}

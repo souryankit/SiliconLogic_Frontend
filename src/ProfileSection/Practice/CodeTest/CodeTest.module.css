@@ -1,0 +1,588 @@
+/* Code Test Container */
+.codeTestContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 4px;
+  background-color: #f8f9fa;
+  height:140vh;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.languageSelector {
+  min-width: 50px;
+  color: rgb(107, 55, 203);
+  margin-left: 2px;
+}
+
+.selectContainer {
+  font-size: 1rem;
+}
+
+
+
+
+
+
+
+/* Main Content */
+.mainContent {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  flex: 1;
+  height: 90%;
+  width: 100%;
+  align-items:center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Added: fixed split row for editor + tests */
+.topRow {
+  display: flex;
+  gap: 8px;
+  height: 100vh;
+  width: 97%;
+}
+
+/* Added: generic frame styling */
+.frame {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #2e2e2e;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Added: frame header */
+.frameHeader {
+  display: flex;
+  background: #ffffff;
+  padding: 8px 12px;
+  border-bottom: 1px solid #2e2e2e;
+  font-weight: 600;
+}
+
+/* Added: scrollable frame body with padding */
+.frameScrollable {
+  padding: 12px;
+  overflow: auto;
+}
+
+/* Added: results frame spacing */
+.resultsFrame {
+  margin-top: 8px;
+  margin-left: 4px;
+  height: 20vh;
+  width: 97%;
+}
+
+/* Editor Section */
+.editorSection {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.editorHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.editorActions {
+  display: flex;
+  gap: 10px;
+}
+
+.actionBtn {
+  padding: 8px 16px;
+  border: 1px solid #667eea;
+  background-color: transparent;
+  color: #667eea;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.actionBtn:hover {
+  background-color: #667eea;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.editorContainer {
+  /* adjusted to live inside .frame without double borders */
+  border: none;
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: none;
+  flex: 1;
+}
+
+/* Test Cases Section */
+.testCasesSection {
+  display: flex;
+  flex-direction: column;
+  margin-left: 4px;
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.testCaseForm {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.testCaseForm h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.testCaseInputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputGroup label {
+  font-weight: 600;
+  color: #495057;
+  font-size: 0.9rem;
+}
+
+.testInput {
+  min-height: 100px;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9rem;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.testInput:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.addTestBtn {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.addTestBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.testCasesList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.testCasesList h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.testCaseItem {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.testCaseItem:hover {
+  border-color: #667eea;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+}
+
+.testCaseHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.testCaseNumber {
+  font-weight: 600;
+  color: #667eea;
+  font-size: 1rem;
+}
+
+.removeBtn {
+  padding: 6px 12px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.removeBtn:hover {
+  background-color: #c82333;
+  transform: translateY(-1px);
+}
+
+.testCaseContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.testCaseInput,
+.testCaseExpected {
+  background-color: white;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+}
+
+.testCaseInput strong,
+.testCaseExpected strong {
+  color: #495057;
+  font-size: 0.9rem;
+}
+
+.testCaseInput pre,
+.testCaseExpected pre {
+  margin: 8px 0 0 0;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.8rem;
+  color: #333;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Results Section */
+.resultsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.output {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.output h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.outputContent {
+  background-color: #2d3748;
+  color: #e2e8f0;
+  padding: 15px;
+  border-radius: 6px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9rem;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.testResults {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.testResults h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.resultItem {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.resultItem.passed {
+  border-color: #28a745;
+  background-color: #f8fff9;
+}
+
+.resultItem.failed {
+  border-color: #dc3545;
+  background-color: #fff8f8;
+}
+
+.resultHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  margin-bottom: 10px;
+}
+
+.resultStatus {
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.passed .resultStatus {
+  background-color: #28a745;
+  color: white;
+}
+
+.failed .resultStatus {
+  background-color: #dc3545;
+  color: white;
+}
+
+.resultDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9rem;
+}
+
+.resultDetails div {
+  padding: 8px;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid #e9ecef;
+}
+
+/* Action Buttons */
+.actionButtons {
+  display: flex;
+  gap: 1px;
+  justify-content: center;
+  padding: 2px;
+  border-radius: 8px;
+  /* background-color: white; */
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+  margin-left: auto;
+}
+
+.addBtn,
+.runBtn,
+.submitBtn {
+  padding: 2px 4px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  min-width: 60px;
+  margin-left: 2px;
+}
+
+.runBtn {
+  background: linear-gradient(135deg, #2857a7 0%, #208ec9 100%);
+  color: white;
+}
+.addBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+.runBtn {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+}
+
+.runBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+.submitBtn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.submitBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Responsive adjustments for frames */
+@media (max-width: 992px) {
+  .topRow {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .testCaseInputs {
+    grid-template-columns: 1fr;
+  }
+  
+  .testCaseContent {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .codeTestContainer {
+    padding: 10px;
+    gap: 15px;
+  }
+  
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .languageSelector {
+    min-width: 200px;
+    width: 100%;
+  }
+  
+  .mainContent {
+    padding: 15px;
+  }
+  
+  .editorHeader {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  
+  .actionButtons {
+    flex-direction: column;
+    gap: 1px;
+  }
+  
+  .runBtn,
+  .submitBtn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .codeTestContainer {
+    padding: 5px;
+  }
+  
+  .header {
+    padding: 10px;
+  }
+  
+  .title {
+    font-size: 1.2rem;
+  }
+  
+  .mainContent {
+    padding: 10px;
+  }
+  
+  .testCaseForm {
+    padding: 15px;
+  }
+  
+  .testCaseItem {
+    padding: 10px;
+  }
+  
+  .output {
+    padding: 15px;
+  }
+}
+
+/* Focus styles for keyboard navigation */
+button:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}

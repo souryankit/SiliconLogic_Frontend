@@ -1,0 +1,304 @@
+/* Footer Component CSS Module */
+
+/* Main Footer Styling */
+.footer {
+  padding: 50px 0 0 0;
+  color: #ffffffd3;
+}
+
+footer a {
+  color: #707070;
+}
+
+footer a:hover {
+  color: #7b00ed;
+  transform: translateY(-6px);
+}
+
+footer h1,
+footer h2,
+footer h3,
+footer h4,
+footer h5,
+footer h6 {
+  color: rgb(0, 0, 0);
+}
+
+footer address {
+  line-height: 1.6em;
+  color: #6e6868;
+}
+
+footer h5 a:hover,
+footer a:hover {
+  text-decoration: none;
+}
+
+/* Social Network Links */
+ul.social-network {
+  list-style: none;
+  margin-top: 20px;
+  padding-left: 0;
+}
+
+ul.social-network li {
+  display: inline;
+  margin: 0 10px;
+}
+
+/* Sub Footer Section */
+#sub-footer {
+  text-shadow: none;
+  color: #dbd7d7;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  margin: 20px 0 0 0;
+  background: #04a3c7;
+}
+
+#sub-footer p {
+  margin: 0;
+  padding: 0;
+}
+
+#sub-footer span {
+  color: #bbbbbb;
+  font-weight: bold;
+}
+
+/* Copyright Section */
+.copyright {
+  text-align: left;
+  font-size: 12px;
+}
+
+/* Footer Typography */
+.span1{
+  font-size: 36px;
+  font-weight: 700;
+  color: #ff6565;
+}
+
+/* Footer specific sidebar styling (for profile sections) */
+.sidebar-footer {
+  background: #f8f9fa;
+  padding: 20px;
+  border-top: 1px solid #e9ecef;
+  margin-top: auto;
+}
+
+.chat-footer-info {
+  background: #ffffff;
+  border-top: 1px solid #e9ecef;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Database footer (for profile sections) */
+.db_footer {
+  background: #f8f9fa;
+  padding: 15px 20px;
+  border-top: 1px solid #e9ecef;
+  text-align: center;
+}
+
+.db_footer .error {
+  color: #dc3545;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Form footer for various components */
+.form-footer {
+  background: #ffffff;
+  padding: 20px;
+  border-top: 1px solid #e9ecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-footer .cancel {
+  background: transparent;
+  border: 1px solid #6c757d;
+  color: #6c757d;
+  padding: 8px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.form-footer .cancel:hover {
+  background: #6c757d;
+  color: white;
+}
+
+/* Card Footer Styling */
+.cardFooter {
+  background: #f8f9fa;
+  padding: 15px 20px;
+  border-top: 1px solid #e9ecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.job-card-footer {
+  background: #ffffff;
+  padding: 15px 20px;
+  border-top: 1px solid #e9ecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.job-footer-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 14px;
+  color: #6c757d;
+}
+
+/* Leaderboard Footer */
+.leaderboard-footer {
+  background: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #e9ecef;
+}
+
+/* Gallery Action Footer */
+.gallery-action-footer {
+  background: #ffffff;
+  padding: 15px 20px;
+  border-top: 1px solid #e9ecef;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Footer Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 0 0 0;
+  }
+
+  .span1 {
+    font-size: 28px;
+  }
+
+  #sub-footer {
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .copyright {
+    text-align: center;
+    font-size: 11px;
+  }
+
+  ul.social-network {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  ul.social-network li {
+    margin: 0 5px;
+  }
+
+  .sidebar-footer {
+    padding: 15px;
+  }
+
+  .chat-footer-info {
+    padding: 10px 15px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .db_footer {
+    padding: 10px 15px;
+  }
+
+  .form-footer {
+    padding: 15px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .cardFooter {
+    padding: 10px 15px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .job-card-footer {
+    padding: 10px 15px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .job-footer-info {
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 20px 0 0 0;
+  }
+
+  .span1 {
+    font-size: 24px;
+  }
+
+  footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
+    font-size: 16px;
+  }
+
+  footer address {
+    font-size: 14px;
+  }
+
+  .leaderboard-footer {
+    padding: 15px;
+  }
+
+  .gallery-action-footer {
+    padding: 10px 15px;
+    flex-wrap: wrap;
+  }
+}
+
+/* Footer Link Animations */
+footer a {
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  transform: translateY(-2px);
+}
+
+/* Social Media Icons in Footer */
+ul.social-network li a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  color: #fff;
+  background: #7b00ed;
+  transition: all 0.3s ease;
+}
+
+ul.social-network li a:hover {
+  background: #5825e3;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(123, 0, 237, 0.4);
+} 

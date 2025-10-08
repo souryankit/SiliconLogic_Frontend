@@ -1,0 +1,21 @@
+/*---------------------
+ Contact Page
+----------------------*/
+.ad-icon{
+    padding-bottom: 15px;
+  }
+  .ad-red{
+    padding-top: 25px;
+    background-color: #fec8c89a;
+    height: 30vh;
+  }
+  .ad-blue{
+    padding-top: 25px;
+    background-color: #d5c0ff81;
+    height: 30vh;
+  }
+  .ad-green{
+    padding-top: 25px;
+    background-color: #c1fff379;
+    height: 30vh;
+  }

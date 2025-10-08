@@ -1,0 +1,1505 @@
+#home-content.home-bg {
+    background-image: linear-gradient(to right, #000000, #080019,  #00004e) !important;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    overflow-x:hidden;
+    min-height: 100vh;
+    height: 80vh !important;
+    padding-left: 20px;
+    padding-bottom: 0px;
+  }
+
+
+  .home-bg {
+    background-image: linear-gradient(to bottom, #000000, #000033, #000066) !important;
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  .home-title {
+    font-size: 48px;
+    margin-top: 120px;
+    font-weight: bold;
+    color: rgb(205, 205, 205);
+  }
+  
+  .know-more{
+    text-decoration: "none";
+    margin-top: 48px;
+    margin-left: 20px;
+    font-size: "28px";
+    color: "blueviolet";
+    font-weight: "bold";
+  }
+  .online-course {
+    border-radius: 20px;
+    padding: 25px;
+    position: relative;
+    background: #fff;
+  }
+  .course-inner-content {
+    margin-left: 20px;
+  }
+  .course-radius {
+    border-radius: 20px;
+    width: 100%;
+    border: 1px solid #e9ecef;
+  }
+  .blur-border.course-radius {
+    padding: 1px;
+    border-radius: 20px;
+  }
+  .course-full-width {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+  }
+  .course-full-width:hover {
+    top: -10px;
+    transition: top ease 0.5s;
+  }
+  .online-course h4 {
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .course-inner-content h4 {
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #000;
+  }
+  .course-inner-content p {
+    color: #000000;
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  .student-course {
+    position: relative;
+    margin-top: -60px;
+  } 
+  .middlepic {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    max-height: 500px;
+  }
+  /*-----------
+ features
+ --------------*/
+.grid-2-columns {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 28px;
+  grid-row-gap: 28px;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+}
+.card.features-icon-left-card {
+  display: -ms-grid;
+  display: grid;
+  padding: 44px 42px;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 24px;
+  grid-row-gap: 16px;
+  -ms-grid-columns: 72px 1fr;
+  grid-template-columns: 72px 1fr;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+}
+.display-4 {
+  color: #211f54;
+  font-size: 28px;
+  line-height: 1.429em;
+  font-weight: 700;
+}
+.mg-bottom-0 {
+  margin-bottom: 0px;
+}
+.grid-3-columns {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 28px;
+  grid-row-gap: 28px;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+}
+.gap-row-32px {
+  grid-row-gap: 32px;
+}
+.grid-3-columns.gap-row-32px {
+  grid-row-gap: 32px;
+}
+.mg-bottom-64px {
+  margin-bottom: 64px;
+}
+.mg-bottom-24px {
+  margin-bottom: 24px;
+}
+.mg-bottom-8px {
+  margin-bottom: 8px;
+}
+.inner-container._512px {
+  max-width: 512px;
+}
+.mg-bottom-48px {
+  margin-bottom: 48px;
+}
+.slidercard{
+  height: 60vh;
+  width: fit-content;
+  margin-top: 10vh; 
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  overflow:hidden;
+  display:flex;
+  background-color: "transparent";
+  box-shadow: 0 2px 15px 0 rgba(33, 31, 84, 0.06);
+}
+.card1 {
+  border-radius: 32px;
+  background-color: "transparent";
+  /* box-shadow: 0 2px 15px 0 rgba(33, 31, 84, 0.06); */
+}
+.grid-7-columns {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 8px;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+}
+.card1.features-icon-card7 {
+  display: -ms-grid;
+  display: grid;
+  padding: 16px 14px;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 12px;
+  grid-row-gap: 8px;
+  -ms-grid-columns: 72px 1fr;
+  grid-template-columns: 72px 1fr;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+
+}
+.display-7 {
+  color: #312e72;
+  font-size: 20px;
+  line-height: 1.6em;
+  font-weight: 700;
+}
+.home-feature {
+  background-image: linear-gradient(to right, rgb(248, 207, 200), rgb(193, 234, 255));
+  height: auto;
+}
+.features-bg {
+  display:cover;
+  background: url("/public/static_img/features.png");
+  background-size:cover;
+  background-position: top;
+  background:cover;
+  height: 100vh;
+  margin-top: -20px;
+}
+.activity-bg{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+  overflow: hidden;
+}
+.home-course {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(to right, rgb(248, 207, 200), rgb(193, 234, 255));
+}
+.lead-companies {
+  padding: 0px 0px 56px;
+}
+.lead-companies .owl-carousel .owl-stage {
+  display: flex;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+.enroll-group {
+  background: linear-gradient(
+    90deg,
+    rgba(161, 196, 253, 0.79) 0%,
+    rgba(194, 233, 251, 0.36) 100%
+  );
+  border: 1px solid rgba(255, 222, 218, 0.38);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 40px 0px;
+}
+.enroll-img {
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+}
+.course-count {
+  margin-left: 25px;
+  color: #000000;
+}
+.course-count p {
+  margin-bottom: 0;
+  font-size: 18px;
+}
+.course-count h3 {
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+.icon-group {
+  padding-top: 17px;
+}
+.enroll-group .total-course {
+  margin-bottom: 0px;
+}
+.icon-group .total-course {
+  width: 70px;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.icon-group .total-course {
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s;
+  cursor: pointer;
+}
+.icon-group .total-course:hover {
+  top: -10px;
+}
+.total-course {
+  margin-bottom: 24px;
+}
+.company-scroll-container {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.company-scroll-wrapper {
+  display: flex;
+  animation: scrollCompanies 20s linear infinite;
+  white-space: nowrap;
+  gap: 10px;
+}
+.companycard{
+  height:35px;
+  width: 70px;
+  display: flex;
+  padding: 2px;
+  margin: 24px;
+}
+.company-scroll-wrapper .companycard {
+  flex-shrink: 0;
+}
+
+@keyframes scrollCompanies {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.clubactivities-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  max-height: 120px;
+}
+ 
+@media (max-width: 767px) {
+     /* Replace home-bg background image with gradient in mobile view */
+     #home-content.home-bg {
+        background-image: linear-gradient(to bottom, #000000, #000033, #000066) !important;
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        overflow-x:hidden;
+        min-height: 80vh;
+        height: 80vh !important;
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
+      
+    /* Fix tagline container */
+    .tagline {
+      width: 100%;
+      overflow-x: hidden;
+    }
+    
+    /* Fix the home section */
+    .home-bg {
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    
+   
+    /* Fix any column issues */
+    .col-lg-7, .col-lg-5, .col-lg-4, .col-lg-3, .col-md-6, .col-sm-6 {
+      padding-left: 10px;
+      padding-right: 10px;
+      height: auto !important;
+      min-height: auto !important;
+    }
+    
+    /* Stack all content vertically with animation below content */
+    #home-content .row {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* Content container - place before animation */
+    #home-content .col-lg-7 {
+      order: 1;
+      margin-bottom: 15px;
+    }
+    
+    /* Style the know more button */
+    .know-more {
+      margin: 25px auto 10px;
+      padding: 8px 15px;
+      display: inline-block;
+      text-align: center;
+      /* background: rgba(255, 255, 255, 0.15) !important; */
+      border-radius: 8px;
+      /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+      transition: all 0.3s ease;
+    }
+    
+    .know-more a {
+      color: #ffffff !important;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      display: inline-block;
+      padding: 5px 12px;
+    }
+    
+    /* Fix imcards that might cause horizontal overflow */
+    .imgcard {
+      max-width: 100%;
+      overflow: hidden;
+    }
+    
+    /* Fix home title that might be too wide */
+    .home-title {
+      width: 100%;
+      max-width: 100%;
+      word-wrap: break-word;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      padding: 0px;
+      margin-top: 15px;
+    }
+    
+    /* Fix the overall row structure */
+    .row > * {
+      max-width: 100%;
+    }
+    
+    /* Fix specific sections that might have margin/padding issues */
+    #home-content, #features, #activity, .student-course, .home-course, .lead-companies, .course-content {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      width: 100% !important;
+      overflow-x: hidden !important;
+    }
+    
+   
+    
+    /* Mobile-specific home background styling */
+    #home-content.home-bg {
+      background-image: linear-gradient(to bottom, #000000, #000033, #000066) !important;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      overflow-x: hidden;
+    }
+    
+    /* Mobile-specific text styling for home section */
+    .home-title, .tagline, .know-more a {
+      color: #ffffff !important;
+    }
+    
+    /* Mobile-specific card styling for home section */
+    /* .home-title.imgcard, .know-more.imgcard {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    } */
+    
+    /* Fix column arrangement */
+    #home-content .row {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* Adjust content sizing and spacing */
+    .know-more {
+      margin-top: 25px;
+      margin-bottom: 5px;
+      padding: 0px 0px;
+      display: inline-block;
+      font-size: 0.9rem;
+      width: auto;
+    }
+    
+    .know-more a {
+      padding: 0px 6px;
+      display: inline-block;
+    }
+    
+    /* Ensure tagline has proper space */
+    .tagline {
+      margin: -20px 0;
+      padding: 0px 0px;
+    }
+
+    #home-content .row {
+        display: flex;
+        flex-direction: column;
+      }
+    
+      #home-content .col-lg-7 {
+        order: 1;
+        width: 100%;
+      }
+   /* Prevent horizontal scroll in course section */
+   .home-course .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* Fix row in activity section */
+  .clubactivities {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+  }
+ /* Tagline responsive styling */
+@media (max-width: 600px) {
+    .tagline span.text-5xl {
+      font-size: 20px !important;
+    }
+    
+    .tagline .mx-2 {
+      margin-left: 0.15rem;
+      margin-right: 0.15rem;
+    }
+  } 
+/* Features Section Mobile Improvements */
+@media screen and (max-width: 768px) {
+  #features {
+    padding: 2rem 0;
+  }
+  
+  #features .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  #features .grid-7-columns {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  
+  #features .features-bg {
+    display: none;
+  }
+  
+  #features .col-7 {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  #features .card1.features-icon-card7 {
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  #features .card1.features-icon-card7 img {
+    width: 42px;
+    height: 42px;
+    margin-right: 15px;
+    object-fit: contain;
+  }
+  
+  #features .card1.features-icon-card7 div {
+    flex: 1;
+  }
+  
+  #features .card1.features-icon-card7 h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  
+  #features .card1.features-icon-card7 p {
+    margin-bottom: 0;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}
+
+/* Extra Small Devices */
+@media screen and (max-width: 480px) {
+  #features .card1.features-icon-card7 {
+    padding: 1rem;
+  }
+  
+  #features .card1.features-icon-card7 img {
+    width: 36px;
+    height: 36px;
+    margin-right: 12px;
+  }
+  
+  #features .card1.features-icon-card7 h3 {
+    font-size: 16px;
+  }
+  
+  #features .card1.features-icon-card7 p {
+    font-size: 14px;
+  }
+}
+
+  /* Student Course Section Mobile Improvements */
+@media screen and (max-width: 768px) {
+  .student-course {
+    padding: 2rem 0;
+  }
+  
+  .student-course .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .student-course .row {
+    margin-left: -10px;
+    margin-right: -10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Make two cards per row on mobile for better layout */
+  .student-course .col-lg-3.col-md-6 {
+    width: 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .student-course .course-full-width {
+    width: 100%;
+  }
+  
+  .student-course .blur-border {
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    margin-bottom: 0;
+    height: 100%; /* Make all cards the same height */
+  }
+  
+  .student-course .online-course {
+    padding: 0.5rem 0;
+    justify-content: center;
+  }
+  
+  .student-course .course-img {
+    margin-right: 15px;
+  }
+  
+  .student-course .course-img img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+  }
+  
+  .student-course .course-inner-content h4 {
+    font-size: 22px;
+    margin-bottom: 4px;
+  }
+  
+  .student-course .course-inner-content p {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+}
+
+/* Extra Small Devices */
+@media screen and (max-width: 480px) {
+  .student-course {
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+  }
+  
+  .student-course .course-img img {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .student-course .course-inner-content h4 {
+    font-size: 20px;
+  }
+  
+  .student-course .course-inner-content p {
+    font-size: 13px;
+  }
+  
+  .student-course .blur-border {
+    padding: 0.75rem;
+  }
+}
+
+/* Very Small Devices */
+@media screen and (max-width: 360px) {
+  .student-course .online-course {
+    justify-content: flex-start;
+  }
+}
+/* home-course Section */
+@media (max-width: 600px) {
+  .home-course {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    height: auto;
+  }
+  
+  .section-header {
+    margin-bottom: 15px;
+  }
+  
+  .section-text {
+    margin-bottom: 15px;
+  }
+  
+  .course-feature {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 10px;
+  }
+  
+  .course-feature::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(0,0,0,0.1);
+  }
+  
+  .activity-bg {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
+    background-color: #f9f9f9;
+  }
+  
+  .course-feature .row {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .course-feature .row::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  .course-feature .row::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 10px;
+  }
+  
+  .course-feature .col-lg-4 {
+    flex: 0 0 90%;
+    max-width: 90%;
+    scroll-snap-align: start;
+    margin-right: 15px;
+  }
+  
+  .course-box {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .course-feature .product {
+    height: auto;
+    min-height: 0;
+  }
+  
+  .product-content {
+    padding: 15px;
+  }
+  
+  .course-feature .row {
+    padding-left: 5px;
+  }
+  
+  /* Create visual separation between sections */
+  .home-course::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    right: 5%;
+    height: 2px;
+    background: rgba(0,0,0,0.07);
+    border-radius: 1px;
+  }
+}
+/* Mobile Responsive Styles Courses page (Tablets and Mobile) */
+@media screen and (max-width: 768px) {
+  /* Make View Details buttons smaller on mobile */
+  .course-feature .product .all-btn .btn-primary,
+  .home-course .product .all-btn .btn-primary {
+    font-size: 12px;
+    padding: 6px 10px;
+    min-width: 0;
+    white-space: nowrap;
+  }
+  
+  /* Adjust spacing in product content for better fit */
+  .course-feature .product .product-content,
+  .home-course .product .product-content {
+    padding: 15px 12px;
+  }
+  
+  /* Reduce margin/padding around button container */
+  .course-feature .product .all-btn,
+  .home-course .product .all-btn {
+    margin-left: 5px;
+  }
+  
+  /* Adjust rating size for better mobile layout */
+  .course-feature .product .rating .average-rating,
+  .home-course .product .rating .average-rating {
+    font-size: 12px;
+  }
+  
+  /* Styles for category buttons */
+  .all-btn.all-category {
+    margin-top: 10px;
+  }
+  
+  .all-btn.all-category .btn-primary {
+    padding: 6px 12px;
+    font-size: 12px;
+    min-width: 80px;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  /* Adjust product card styling for better mobile layout */
+  .product-content h3.title {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+  
+  .course-info {
+    margin: 10px 0;
+  }
+  
+  .course-info p {
+    font-size: 12px;
+  }
+}
+
+/* Extra Small Devices (Phones) */
+@media screen and (max-width: 480px) {
+  /* Smaller screens need even more compact buttons */
+  .course-feature .product .all-btn .btn-primary,
+  .home-course .product .all-btn .btn-primary {
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+  
+  /* Further reduce content padding */
+  .course-feature .product .product-content,
+  .home-course .product .product-content {
+    padding: 12px 10px;
+  }
+  
+  /* Make title smaller for better spacing */
+  .course-feature .product-content h3.title,
+  .home-course .product-content h3.title {
+    font-size: 16px;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+  
+  /* Make course info more compact */
+  .course-feature .product .course-info,
+  .home-course .product .course-info {
+    margin-bottom: 10px;
+  }
+  
+  /* Extra small device specific button styles */
+  .all-btn.all-category .btn-primary {
+    padding: 5px 10px;
+    font-size: 11px;
+    min-width: 70px;
+  }
+  
+  .product-content {
+    padding: 12px 10px;
+  }
+  
+  .course-info p {
+    font-size: 11px;
+  }
+}
+
+
+/* Mobile Responsive Styles Courses page*/
+
+@media (max-width: 600px) {
+  /* Hide the middlepic in mobile view */
+  .clubactivities .col-4.imgcard {
+    display: none;
+  }
+  
+  /* Adjust tabs spacing in mobile view */
+  .clubactivities .col-4 {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 0 15px;
+  }
+  
+  .clubactivities .container-fluid {
+    padding: 10px !important;
+    margin-bottom: 12px;
+  }
+  
+  .imgcard {
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .imgcard .row {
+    margin: 0;
+  }
+  
+  .imgcard .col {
+    padding: 10px;
+  }
+  
+  .imgcard .col h4 {
+    margin-top: 8px;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .imgcard .col p {
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 600px) {
+  .activity-bg {
+    padding-top: 30px;
+    margin-top: 10px;
+    position: relative;
+    z-index: 1;
+  }
+  .clubactivities {
+    padding: 15px 0 !important;
+  }
+  
+  .clubactivities .col-4 {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .imgcard .row {
+    flex-direction: column;
+  }
+  
+  .imgcard .col {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .imgcard .col h4 {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  
+  .imgcard .col p {
+    font-size: 14px;
+  }
+  
+  .middlepic {
+    max-height: 300px;
+    margin-bottom: 15px;
+  }
+  
+  .imgf {
+    max-height: 180px;
+    margin-bottom: 10px;
+  }
+  .activity .container .clubactivities .col-4 .container-fuild .row .col img {
+    width: 80vw;
+  }
+
+  .imgf {
+    width: 80vw;
+  }
+
+  #clubactivities {
+    display: block;
+  }
+
+}
+
+@media (min-width: 601px) and (max-width: 991px) {
+  .clubactivities .col-4 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .middlepic {
+    max-height: 400px;
+  }
+  
+  .imgcard .row {
+    align-items: center;
+  }
+  
+  .imgf {
+    max-height: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  .activity-bg {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .clubactivities {
+    padding: 10px 0 !important;
+  }
+  
+  .clubactivities .col-4 {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 0 10px;
+  }
+  
+  .imgcard {
+    margin-bottom: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .imgcard .row {
+    flex-direction: column;
+  }
+  
+  .imgcard .col {
+    width: 100%;
+    text-align: center;
+    padding: 8px;
+  }
+  
+  .imgcard .col h4 {
+    margin-top: 8px;
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+  
+  .imgcard .col p {
+    font-size: 14px;
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  
+  .middlepic {
+    max-height: 250px;
+    margin: 10px auto;
+    border-radius: 8px;
+    width: 90%;
+    display: block;
+  }
+  
+  .imgf {
+    max-height: 120px;
+    margin: 0 auto 5px;
+    width: 90%;
+    display: block;
+  }
+
+  .container-fluid {
+    padding: 3px !important;
+  }
+}
+
+
+
+/*/////////////////////////////////////////////
+ Atom Animation Block 
+/////////////////////////////////////////////*/  
+:root {
+  --atomSize: 560px;
+  --nucleusSize: 120px;
+  --orbitSize: 400px;
+  --electronSize: 12px;
+  --protonColor: #7959b0;
+  --electronColor: #FF9800;
+  --orbitColor: rgba(255, 255, 255, 0.595);
+}
+
+@-webkit-keyframes shining {
+  0% { opacity: 1.5; }
+  50% { opacity: 3; }
+  100% { opacity: 1.5; }
+}
+@-moz-keyframes shining {
+  0% { opacity: 1.5; }
+  50% { opacity: 3; }
+  100% { opacity: 1.5; }
+}
+@-ms-keyframes shining {
+  0% { opacity: 1.5; }
+  50% { opacity: 3; }
+  100% { opacity: 1.5; }
+}
+@-o-keyframes shining {
+  0% { opacity: 1.5; }
+  50% { opacity: 3; }
+  100% { opacity: 1.5; }
+}
+@keyframes shining {
+  0% { opacity: 1.5; }
+  50% { opacity: 3; }
+  100% { opacity: 1.5; }
+}
+
+@-webkit-keyframes orbitSpecial {
+  0% { transform: rotateZ(0deg); }
+  100% { transform: rotateZ(360deg); }
+}
+@-moz-keyframes orbitSpecial {
+  0% { transform: rotateZ(0deg); }
+  100% { transform: rotateZ(360deg); }
+}
+@-ms-keyframes orbitSpecial {
+  0% { transform: rotateZ(0deg); }
+  100% { transform: rotateZ(360deg); }
+}
+@-o-keyframes orbitSpecial {
+  0% { transform: rotateZ(0deg); }
+  100% { transform: rotateZ(360deg); }
+}
+@keyframes orbitSpecial {
+  0% { transform: rotateZ(0deg); }
+  100% { transform: rotateZ(360deg); }
+}
+
+@-webkit-keyframes electronAnimation {
+  0% { transform: rotateZ(0deg) translateX(calc(var(--orbitSize) / 2)); }
+  100% { transform: rotateZ(360deg) translateX(calc(var(--orbitSize) / 2)); }
+}
+@-moz-keyframes electronAnimation {
+  0% { transform: rotateZ(0deg) translateX(calc(var(--orbitSize) / 2)); }
+  100% { transform: rotateZ(360deg) translateX(calc(var(--orbitSize) / 2)); }
+}
+@-ms-keyframes electronAnimation {
+  0% { transform: rotateZ(0deg) translateX(calc(var(--orbitSize) / 2)); }
+  100% { transform: rotateZ(360deg) translateX(calc(var(--orbitSize) / 2)); }
+}
+@-o-keyframes electronAnimation {
+  0% { transform: rotateZ(0deg) translateX(calc(var(--orbitSize) / 2)); }
+  100% { transform: rotateZ(360deg) translateX(calc(var(--orbitSize) / 2)); }
+}
+@keyframes electronAnimation {
+  0% { transform: rotateZ(0deg) translateX(calc(var(--orbitSize) / 2)); }
+  100% { transform: rotateZ(360deg) translateX(calc(var(--orbitSize) / 2)); }
+}
+
+#atom{
+  position: relative;
+  width: var(--atomSize);
+  height: var(--atomSize);
+  display: inline-block;
+  margin: 10px auto;
+}
+.atom-container {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+}
+#nucleus, .orbit, .electron, .orbitTrain, .electronTrain{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: var(--nucleusSize);
+  height: var(--nucleusSize);
+  border-radius: 50%;
+  margin: auto;
+}
+
+#nucleus{
+  background: var(--protonColor);
+  box-shadow: 0 0 15px var(--protonColor);
+  -webkit-animation: shining 3s infinite linear;
+  -moz-animation: shining 3s infinite linear;
+  -ms-animation: shining 3s infinite linear;
+  -o-animation: shining 3s infinite linear;
+  animation: shining 3s infinite linear;
+}
+
+.orbit:before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  border: 0.5px solid rgba(255,255,255,0.1);
+  border-radius: 50%;
+}
+
+.orbit{
+  width: var(--orbitSize);
+  height: var(--orbitSize);
+  border: 0;
+  transform-style: preserve-3d;
+  -webkit-animation: orbitSpecial 2.5s infinite linear;
+  -moz-animation: orbitSpecial 2.5s infinite linear;
+  -ms-animation: orbitSpecial 2.5s infinite linear;
+  -o-animation: orbitSpecial 2.5s infinite linear;
+  animation: orbitSpecial 2.5s infinite linear;
+}
+
+.orbit .electron{
+  position: relative;
+  top: calc((var(--orbitSize) - var(--electronSize)) / 2);
+  width: var(--electronSize);
+  height: var(--electronSize);
+  background: var(--electronColor);
+  box-shadow: 0 0 15px var(--electronColor);
+  border-radius: 50%;
+  transform: translateX(calc(var(--orbitSize) / 2));
+  -webkit-animation: electronAnimation 8s infinite linear;
+  -moz-animation: electronAnimation 8s infinite linear;
+  -ms-animation: electronAnimation 8s infinite linear;
+  -o-animation: electronAnimation 8s infinite linear;
+  animation: electronAnimation 8s infinite linear;
+}
+
+.orbit:nth-child(4){
+  transform: rotateY(65deg) rotateX(5deg);
+  animation-delay: -1s;
+  .electron{
+    animation-delay: -1s;
+    animation-duration: 9s;
+  }
+}
+
+.orbit:nth-child(2){
+  transform: rotateY(65deg) rotateX(-54deg);
+  animation-delay: -1s;
+  animation-duration: 3s;
+  .electron{
+    animation-duration: 7s;
+  }
+}
+
+.orbit:nth-child(3){
+  transform: rotateY(65deg) rotateX(54deg);
+  .electron{
+    animation-duration: 10s;
+  }
+}
+
+@keyframes electronAnimation {
+  0% { transform: rotateZ(0deg) translateX(calc(var(--orbitSize) / 2)) rotateZ(-0deg) rotateY(-65deg)}
+  100% { transform: rotateZ(360deg) translateX(calc(var(--orbitSize) / 2)) rotateZ(-360deg) rotateY(-65deg)}
+}
+
+@keyframes orbitSpecial {
+  0% { border: 0;
+       border-top: 1px solid var(--orbitColor)}
+  35% { border: 0;
+        border-right: 1px solid var(--orbitColor)}
+  70% { border: 0;
+        border-bottom: 1px solid var(--orbitColor)}
+  100% { border: 0;
+        border-left: 1px solid var(--orbitColor)}
+}
+
+@keyframes shining {
+  0% {
+    box-shadow: 0 0 0 transparent;
+  } 50% { 
+    box-shadow: 0 0 60px var(--protonColor);
+  } 100% { 
+    box-shadow: 0 0 0 transparent;
+  }
+}
+
+
+ /* Fix mobile styling for the atom specific mobile view */
+@media only screen and (max-width: 500px) {
+  /* Ball animation positioning */
+  .atom {
+    position: relative;
+    left: auto;
+    right: auto;
+    margin: 0 auto;
+    transform: scale(0.6);
+    top: 0;
+  }
+}
+
+/* Responsive styling for atom animation */
+@media (max-width: 768px) {
+  :root {
+    --atomSize: 320px;
+    --nucleusSize: 80px;
+    --orbitSize: 230px;
+    --electronSize: 8px;
+  }
+
+  #atom {
+    margin: 0 auto;
+    transform: scale(0.9);
+  }
+ /* Fix element that has absolute positioning */
+ .atom {
+  right: auto;
+  max-width: 100%;
+  position: relative;
+  left: auto;
+  right: auto;
+  margin: 0 auto;
+  transform: scale(0.7);
+}
+  .orbit {
+    -webkit-animation: orbitSpecial 3s infinite linear;
+    -moz-animation: orbitSpecial 3s infinite linear;
+    -ms-animation: orbitSpecial 3s infinite linear;
+    -o-animation: orbitSpecial 3s infinite linear;
+    animation: orbitSpecial 3s infinite linear;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --atomSize: 260px;
+    --nucleusSize: 60px;
+    --orbitSize: 180px;
+    --electronSize: 6px;
+  }
+
+  #atom {
+    transform: scale(0.85);
+  }
+
+  #nucleus {
+    -webkit-animation: shining 3s infinite linear;
+    -moz-animation: shining 3s infinite linear;
+    -ms-animation: shining 3s infinite linear;
+    -o-animation: shining 3s infinite linear;
+    animation: shining 3s infinite linear;
+  }
+
+  .orbit:nth-child(4) {
+    transform: rotateY(55deg) rotateX(5deg);
+  }
+  
+  .orbit:nth-child(2) {
+    transform: rotateY(55deg) rotateX(-50deg);
+  }
+  
+  .orbit:nth-child(3) {
+    transform: rotateY(55deg) rotateX(50deg);
+  }
+}
+
+/* Update mobile view to position atom after the know-more button */
+@media (max-width: 768px) {
+  :root {
+    --atomSize: 320px;
+    --nucleusSize: 80px;
+    --orbitSize: 230px;
+    --electronSize: 8px;
+  }
+
+  #atom {
+    margin: 0px auto 0;
+    transform: scale(0.9);
+    order: 2 !important;
+    display: block;
+    width: 100%;
+  }
+
+ 
+
+  .orbit {
+    -webkit-animation: orbitSpecial 3s infinite linear;
+    -moz-animation: orbitSpecial 3s infinite linear;
+    -ms-animation: orbitSpecial 3s infinite linear;
+    -o-animation: orbitSpecial 3s infinite linear;
+    animation: orbitSpecial 3s infinite linear;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --atomSize: 260px;
+    --nucleusSize: 60px;
+    --orbitSize: 180px;
+    --electronSize: 6px;
+  }
+
+  #atom {
+    transform: scale(0.85);
+    margin-top: 0px;
+  }
+
+  #nucleus {
+    -webkit-animation: shining 3s infinite linear;
+    -moz-animation: shining 3s infinite linear;
+    -ms-animation: shining 3s infinite linear;
+    -o-animation: shining 3s infinite linear;
+    animation: shining 3s infinite linear;
+  }
+
+  .orbit:nth-child(4) {
+    transform: rotateY(55deg) rotateX(5deg);
+  }
+  
+  .orbit:nth-child(2) {
+    transform: rotateY(55deg) rotateX(-50deg);
+  }
+  
+  .orbit:nth-child(3) {
+    transform: rotateY(55deg) rotateX(50deg);
+  }
+}
+
+
+
+/* Update mobile view to position atom after the know-more button */
+@media (max-width: 768px) {
+  :root {
+    --atomSize: 320px;
+    --nucleusSize: 80px;
+    --orbitSize: 230px;
+    --electronSize: 8px;
+  }
+
+  #atom.atom-container {
+    margin: -25px auto 0;
+    transform: scale(0.9);
+    order: 2 !important;
+    display: block;
+    width: 100%;
+    text-align: center;
+    clear: both;
+  }
+}
+
+
+/* Fix mobile styling for the atom in media queries */
+@media only screen and (max-width: 500px) {
+  .shadow {
+    width: 90px;
+    height: 20px;
+    top: 48%;
+    animation: expand 5s infinite;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-50px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
+  }
+}
+
+

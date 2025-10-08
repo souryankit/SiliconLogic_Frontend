@@ -1,0 +1,11 @@
+Model Information:
+* title:	Atom
+* source:	https://sketchfab.com/3d-models/atom-b505bc59e6fb48569e4f032a0734f743
+* author:	Master Ron (https://sketchfab.com/master_ron)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Atom" (https://sketchfab.com/3d-models/atom-b505bc59e6fb48569e4f032a0734f743) by Master Ron (https://sketchfab.com/master_ron) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

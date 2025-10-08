@@ -1,0 +1,337 @@
+.db_container {
+    display: flex;
+    flex-direction: column;
+  
+  }
+  
+  .db_header {
+    width: 100%;
+    background-color: #bfbfbf;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    margin-top: 10px;
+  }
+  
+  .db_header .db_heading {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  
+  .db_header .db_heading span {
+    color: #df0262;
+    font-size: 2.7;
+    text-transform: capitalize;
+  }
+  
+  .db_header .logout {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .db_header .logout svg {
+    height: 18px;
+    width: 18px;
+    transition: 200ms;
+  }
+  
+  .db_header .logout {
+    color: rgb(51, 51, 51);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: 200ms;
+  }
+  
+  .db_header .logout:hover,
+  .db_header .logout:hover svg {
+    color: #ff0e6a;
+  }
+  
+  .db_container .db_section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px 5px;
+  }
+  
+  .db_section .db_title {
+    font-weight: bold;
+    font-size: 1.6rem;
+  }
+  
+  .db_profile {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .db_profile .left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .db_profile .left .progress {
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-align: center;
+    color: #392c7d;
+  }
+  
+  .db_profile .left .image {
+    position: relative;
+    height: 160px;
+    width: 160px;
+    margin: 0 auto;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .db_profile .left .image:hover {
+    transform: scale(1.03);
+  }
+  
+  .db_profile .left .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  
+  .db_profile .left .image .camera {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 8px;
+    z-index: 10;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #eee;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .db_profile .left .image .camera:hover {
+    transform: scale(1.1);
+    background-color: #a18eff;
+  }
+  
+  .db_profile .left .image .camera:hover svg {
+    color: white !important;
+  }
+  
+  .db_profile .right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .db_profile .right .row {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .db_profile .right .row > div {
+    flex: 1;
+  }
+  
+  .db_footer {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .db_footer .error {
+    flex: 1;
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: #ff3511;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* akhilendra */
+  @media (max-width:600px) {
+    .db_profile {
+      display: block;
+      gap: 30px;
+      align-items: center;
+      width: 60vw;
+      margin: 0 5vw;
+  }
+  
+  .db_profile .right .row {
+    width: 100%;
+    display: block;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .db_header {
+    width: 85vw;
+    background-color: #bfbfbf;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+  }
+  }
+  
+  /* Additional Professional Styles */
+  .info-card {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #7d63fb, #a18eff);
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .info-card:hover::before {
+    opacity: 1;
+  }
+  
+  .section-title {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: #7d63fb;
+    transition: width 0.3s ease;
+  }
+  
+  .section-title:hover::after {
+    width: 100%;
+  }
+  
+  .progress-card {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .progress-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px rgba(125, 99, 251, 0.15);
+  }
+  
+  .course-card {
+    transition: all 0.3s ease;
+  }
+  
+  .course-card:hover {
+    transform: translateX(5px);
+    border-color: rgba(125, 99, 251, 0.5) !important;
+  }
+  
+  .icon-bg {
+    transition: all 0.3s ease;
+  }
+  
+  .icon-bg:hover {
+    transform: scale(1.1);
+  }
+  
+  .button {
+    color: #392c7d;
+    border: 3px solid #a18eff;
+    backdrop-filter: blur(151.39px);
+    border-radius: 48px;
+    background: transparent;
+    min-width: 120px;
+    padding: 8px 15px;
+    margin: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: all 0.5s ease;
+    z-index: -1;
+  }
+  
+  .button:hover {
+    background-color: #7d63fb;
+    border-color: #7d63fb;
+    color: #fff;
+    text-decoration: none;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(125, 99, 251, 0.3);
+  }
+  
+  .button:hover::before {
+    left: 100%;
+  }
+
+  /* Additional Responsive Styles */
+  @media (max-width: 992px) {
+    .db_profile .left .image {
+      height: 140px;
+      width: 140px;
+      margin: 0 auto;
+    }
+    
+    .button {
+      min-width: 110px;
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .db_profile .left .image {
+      height: 120px;
+      width: 120px;
+    }
+  }

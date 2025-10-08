@@ -1,0 +1,96 @@
+/* MobileNavbar.module.css - Mobile Navbar Styles */
+.sticky-topnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #e0e0e0b9;
+  z-index: 1000;
+}
+.mobile-nav {
+  background-color: #cacaca !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav .navbar-toggler {
+  border: none;
+  padding: 0.15rem 0.5rem;
+}
+
+.mobile-nav .navbar-toggler:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.mobile-nav .nav-link {
+  padding: 0.75rem 1rem;
+  margin: 0.25rem 0;
+}
+
+.mobile-nav .nav-text {
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.mobile-nav .nav-link:hover .nav-text {
+  color: #007bff;
+}
+
+.mobile-nav .dropdown-menu {
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.mobile-nav .dropdown-item {
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+  color: #333;
+}
+
+.mobile-nav .dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.mobile-nav .dropdown-item:hover {
+  background-color: #f8f9fa;
+  color: #007bff;
+}
+
+/* Style for the navbar collapse */
+.mobile-nav .navbar-collapse {
+  transition: all 0.3s ease;
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  margin-top: 5px;
+}
+
+/* Improve the toggle button */
+.mobile-nav .navbar-toggler-icon {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+/* Hide mobile navbar on large screens */
+@media (min-width: 992px) {
+  .mobile-nav {
+    display: none;
+  }
+}
+
+/* Hide desktop navbar on small screens */
+@media (max-width: 991px) {
+  .primary-nav {
+    display: none;
+  }
+  
+  .mobile-nav .navbar-collapse {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+} 

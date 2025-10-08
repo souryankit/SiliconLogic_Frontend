@@ -1,0 +1,66 @@
+graph LR
+    subgraph "Data Sources"
+        A[Firebase Database]
+        B[User Authentication]
+        C[External APIs]
+    end
+
+    subgraph "Core Components"
+        D[Enhanced Notice Board]
+        E[Quick Stats]
+        F[Announcements]
+        G[Event Calendar]
+        H[Club Activities]
+        I[Leaderboard]
+    end
+
+    subgraph "User Interactions"
+        J[Search & Filter]
+        K[Registration]
+        L[Notifications]
+        M[Social Sharing]
+    end
+
+    subgraph "Admin Features"
+        N[Content Management]
+        O[Analytics Dashboard]
+        P[User Management]
+        Q[Event Management]
+    end
+
+    A --> D
+    B --> D
+    C --> D
+
+    D --> E
+    D --> F
+    D --> G
+    D --> H
+    D --> I
+
+    E --> J
+    F --> J
+    G --> K
+    H --> K
+
+    F --> L
+    G --> L
+    H --> L
+
+    E --> M
+    F --> M
+    G --> M
+
+    D --> N
+    E --> O
+    F --> O
+    G --> Q
+    H --> Q
+    I --> P
+
+    style A fill:#FF6B6B,stroke:#fff,stroke-width:2px,color:#fff
+    style D fill:#4ECDC4,stroke:#fff,stroke-width:3px,color:#fff
+    style E fill:#45B7D1,stroke:#fff,stroke-width:2px,color:#fff
+    style F fill:#96CEB4,stroke:#fff,stroke-width:2px,color:#fff
+    style G fill:#FECA57,stroke:#fff,stroke-width:2px,color:#fff
+    style H fill:#FF9FF3,stroke:#fff,stroke-width:2px,color:#fff

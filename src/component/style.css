@@ -1,0 +1,490 @@
+/* Fix for overall layout in mobile view */
+body, html {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+.body {
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+  background: #bedbff;
+  font-family: 'Inter', sans-serif; 
+}
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+/* Text and paragraph styling */
+p, .valuetext, .course-count p, .instructor-content p, .course-name p,
+.benefit-box li, .plan-box p, .product-content p, .course-info p {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+.section-text {
+  max-width: 600px;
+  color: #685f78;
+  text-align: justify;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+.p {
+  line-height: 1.6;
+  color: white;
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+}
+.grid-content {
+  flex: 0 0 auto;
+  width: 58.33333333%;
+}
+
+.justify-text{
+  font-size: 18px;
+  margin-top: 10px;
+  margin-Bottom:0px;
+  font-weight: 420, 
+}
+
+
+.section {
+  position: relative;
+  z-index: 1;
+}
+
+.product-content h3.title.instructor-text a {
+  text-decoration: none;
+}
+
+.course-name h4 a {
+  text-decoration: none;
+}
+
+.product-content h3.title a {
+  text-decoration: none;
+}
+
+
+.pagetitle {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #5825e3 0%, #8b5cf6 50%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2em;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-shadow: none;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+.pagetitle::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #5825e3, #8b5cf6, #a855f7);
+  border-radius: 2px;
+  animation: expandLine 0.8s ease-out forwards;
+}
+.pagetitle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(88, 37, 227, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+  border-radius: 20px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.pagetitle:hover::after {
+  opacity: 1;
+}
+@keyframes expandLine {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 80px;
+    opacity: 1;
+  }
+}
+.subtitle {
+  text-align: center;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  color: #f33376;
+  line-height: 1.111em;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-shadow: 5px 6px  #f3337630;
+  /* text-transform: uppercase; */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Form controls styling */
+input, textarea, select, .form-control, button, .btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+}
+
+/* Table text styling */
+table, td, th, .table td, .table th {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Style for headings in cards and sections */
+.card h3, .card h4, h3.title, h3.display-7, .display-4, .display-41, 
+.section-sub-head h2, .title-sec h2, .title-sec h5 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+
+/* Fade-In Animation Start*/
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+.fade-in-bottom {
+  animation: fadeInBottom 1s ease-in;
+}
+.fade-in-delayed {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  animation-delay: 0.5s;
+}
+.fade-in-hover {
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
+}
+.fade-in-hover:hover {
+  opacity: 1;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fadeInBottom {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+/* FadeIn Animation End*/
+
+/* Floating effect */
+.floating {  
+  animation-name: floating;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 15px); }
+  100%   { transform: translate(0, -0px); }    
+}
+/*---------------------*/
+
+.tabs-container :global(.nav-pills) {
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 1rem;
+  }
+  
+  .tabs-container :global(.nav-pills .nav-link) {
+    color: #6c757d;
+    background: none;
+    border-radius: 0;
+    padding: 0.75rem 1rem;
+    margin-right: 1rem;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .tabs-container :global(.nav-pills .nav-link.active) {
+    color: #0d6efd;
+    background: none;
+    border-bottom: 2px solid #0d6efd;
+  }
+  
+  .tabs-container :global(.nav-pills .nav-link:hover) {
+    color: #0d6efd;
+    background: rgba(13, 110, 253, 0.04);
+  }
+  
+ 
+
+
+/*/////////////////////////////////////////
+---------------------------------------
+Responsive GUI ( Mobile specific fixes ) 
+----------------------------------------
+///////////////////////////////////////////////*/
+
+
+
+@media (max-width: 768px) {
+  body, html {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container, .container-fluid {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    width: 100% !important;
+  }
+  
+  .row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+  
+  section {
+    overflow-x: hidden;
+    width: 100%;
+  }
+   
+}
+/* Responsive design for pagetitle */
+@media (max-width: 768px) {
+  .pagetitle {
+    font-size: 32px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    letter-spacing: 0.01em;
+  }
+  
+  .pagetitle::before {
+    width: 60px;
+  }
+  
+  @keyframes expandLine {
+    0% {
+      width: 0;
+      opacity: 0;
+    }
+    100% {
+      width: 60px;
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .pagetitle {
+    font-size: 22px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    letter-spacing: 0;
+  }
+  
+  .pagetitle::before {
+    width: 50px;
+    height: 3px;
+  }
+  
+  @keyframes expandLine {
+    0% {
+      width: 0;
+      opacity: 0;
+    }
+    100% {
+      width: 50px;
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width:600px) {
+
+  .slidercard{
+    height: 50vh;
+    margin-top: -10vh; 
+    border-radius: 0px;
+    overflow: hidden;
+    background-color: "transparent";
+    box-shadow: 0 2px 15px 0 rgba(33, 31, 84, 0.06);
+  }
+  
+  .home-title {
+    font-size: 24px;
+    margin-top: -1px;
+  }
+ 
+  .position-relative---z-index-1 {
+    position: relative;
+    height: 68vh;
+    z-index: 1;
+}
+
+  .col-lg-5{
+    height: 631px;
+    top: -56vh;
+  }
+
+  .akmiddle {
+    display: none;
+  }
+
+  #club-img0 {
+    display: none;
+  }
+
+  #club-img1 {
+    display: none;
+  }
+
+  #club-img2 {
+    display: none;
+  }
+
+  #club-img3 {
+    display: none;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .grid-7-columns {
+    display: grid;
+    align-items: center;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 16px;
+    grid-row-gap: 8px;
+    grid-template-columns: 1fr;
+    width: 100vw;
+    grid-template-rows: auto;
+  }
+
+  .row {
+    width: 100vw;
+    display: block;
+  }
+
+  .grid-content {
+    width: 100vw;
+  }
+
+  .col-7 {
+    display: block;
+    width: 80vw;
+  }
+
+  .col-5 {
+    width: 80vw;
+  }
+
+  .card1.features-icon-card7 {
+    display: block;
+    width: 80vw;
+  }
+
+  .home-feature {
+    height: auto;
+  }
+
+  .card {
+    display: block;
+  }
+
+  .card .row {
+    display: block;
+  }
+
+  .hometab1,
+  .hometab2,
+  .hometab3 {
+    width: 80vw;
+  }
+
+ 
+  #primnav {
+    display: none;
+  } 
+
+ 
+  
+  .course-feature .row {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .course-feature .row::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  .course-feature .row::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 10px;
+  }
+  
+  .course-feature .col-lg-4 {
+    flex: 0 0 90%;
+    max-width: 90%;
+    scroll-snap-align: start;
+    margin-right: 15px;
+  }
+  
+  .course-box {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+}
+
+
+
+
+
+
+

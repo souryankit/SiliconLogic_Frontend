@@ -1,0 +1,310 @@
+.db_container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .db_header {
+    width: 98%;
+    background-color: #cbffe7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    margin-top: 8px;
+  }
+  
+  .db_header .db_heading {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  
+  .db_header .db_heading span {
+    color: #8702df;
+    font-size: 2.7;
+    text-transform: capitalize;
+  }
+  
+  .db_header .logout {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .db_header .logout svg {
+    height: 18px;
+    width: 18px;
+    transition: 200ms;
+  }
+  
+  .db_header .logout {
+    color: rgb(51, 51, 51);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: 200ms;
+  }
+  
+  .db_header .logout:hover,
+  .db_header .logout:hover svg {
+    color: #ff0e6a;
+  }
+  
+  .db_container .db_section {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    padding: 0px 0px;
+  }
+  
+  .db_section .db_title {
+    font-weight: bold;
+    font-size: 1.6rem;
+  }
+  
+  .db_profile {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .db_profile .left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .db_profile .left .progress {
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  .db_profile .left .image {
+    position:relative;
+    height: 160px;
+    width: 160px;
+    margin-left: 120px;
+    border-radius: 50%;
+    border: 1px solid #eee;
+  }
+  
+  .db_profile .left .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+  }
+  
+  .db_profile .left .image .camera {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 8px;
+    z-index: 10;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #eee;
+    cursor: pointer;
+  }
+  
+  .db_profile .left .image .camera svg {
+    height: 22px;
+    width: 22px;
+    color: #920eff;
+  }
+  
+  .db_profile .right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .db_profile .right .row {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .db_profile .right .row > div {
+    flex: 1;
+  }
+  
+  .db_footer {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .db_footer .error {
+    flex: 1;
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: #ff3511;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .button{
+    color: #392c7d;
+    border: 3px solid #a18eff;
+    backdrop-filter: blur(151.39px);
+    border-radius:48;
+    background: transparent;
+    min-width: 120px;
+    padding: 5px 10px;
+    margin: 8px;
+    font-weight: 400;
+    text-decoration: none;
+    text-align: center;
+  }
+  .button:hover {
+    background-color: #7d63fb;
+    border-color: #7d63fb;
+    color: #fff;
+    text-decoration: none;
+  }
+  /* akhilendra */
+  @media (max-width:600px) {
+    .db_profile {
+      display: block;
+      gap: 30px;
+      align-items: center;
+      width: 60vw;
+      margin: 0 5vw;
+  }
+  
+  .db_profile .right .row {
+    width: 100%;
+    display: block;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .db_header {
+    width: 85vw;
+    background-color: #bfbfbf;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+  }
+  }
+  
+
+  .responsive-calendar {
+    /* by setting font-size, all the elements will correspond */
+    font-size: 9px !important; /* default to 10px */
+  }
+  
+  @media (max-width: 1500px) {
+    .responsive-calendar {
+      font-size: 8px !important;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .responsive-calendar {
+      font-size: 7px !important;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .responsive-calendar {
+      font-size: 6px !important;
+      width: 100% !important;
+      max-width: 300px !important;
+      margin: 0 auto !important;
+    }
+
+    /* Ensure calendar container doesn't overflow */
+    .responsive-calendar * {
+      box-sizing: border-box !important;
+    }
+  }
+
+  /* Mobile specific calendar improvements */
+  @media (max-width: 576px) {
+    .responsive-calendar {
+      font-size: 4.5px !important;
+      width: 100% !important;
+      max-width: 260px !important;
+      margin: 0 auto !important;
+      transform: scale(0.85) !important;
+      transform-origin: center !important;
+    }
+    
+    /* Ensure calendar cells are touch-friendly */
+    .responsive-calendar .-day {
+      min-height: 22px !important;
+      min-width: 22px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    /* Calendar container adjustments for mobile */
+    .responsive-calendar table {
+      width: 100% !important;
+      table-layout: fixed !important;
+    }
+
+    /* Calendar header adjustments */
+    .responsive-calendar .-monthYear {
+      font-size: 1.1em !important;
+      margin-bottom: 5px !important;
+    }
+
+    /* Navigation arrows */
+    .responsive-calendar .-arrowWrapper {
+      padding: 2px 4px !important;
+    }
+  }
+
+  /* Extra small devices */
+  @media (max-width: 480px) {
+    .responsive-calendar {
+      font-size: 4px !important;
+      max-width: 240px !important;
+      transform: scale(0.8) !important;
+    }
+  }
+
+  /* Very small devices */
+  @media (max-width: 400px) {
+    .responsive-calendar {
+      font-size: 3.5px !important;
+      max-width: 220px !important;
+      transform: scale(0.75) !important;
+    }
+  }
+  
+  /* Large screens */
+  @media (min-width: 2500px) {
+    .responsive-calendar {
+      font-size: 12px !important;
+    }
+  }
+
+  /* Calendar current date highlighting */
+  /* .responsive-calendar .-today {
+    background-color: #0d6efd !important;
+    color: white !important;
+    font-weight: bold !important;
+    border-radius: 50% !important;
+  }
+
+  .responsive-calendar .-today:hover {
+    background-color: #0b5ed7 !important;
+    color: white !important;
+  }
+*/
+ 

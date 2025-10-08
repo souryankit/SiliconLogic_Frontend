@@ -1,0 +1,77 @@
+/* Top Navigation Bar CSS Module */
+.sticky-topnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #e0e0e0b9;
+  z-index: 1000;
+  margin-bottom: 0;
+}
+
+/* Ensure no gap below navbar */
+/* .sticky-topnav + * {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+} */
+
+/* Main Navbar Styling */
+.navbar{  
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+  min-height: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.navbar .nav-item {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+/* Navigation Text Styling */
+.nav-text {
+  color: #550d9e;
+  font-size: 18px;
+}
+
+.nav-text:hover {
+  color: #9a4ce8;
+  font-weight: 400;
+}
+
+/* Navigation Layout */
+.navbar-nav{
+  margin-left: 10px;
+}
+
+/* Responsive Design for Navigation */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.15rem 0.5rem;
+  }
+
+  .nav-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0.5rem;
+  }
+
+  .navbar .nav-item {
+    margin: 0.1rem;
+  }
+
+  #primnav {
+    background: #fff;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-text {
+    font-size: 14px;
+  }
+} 

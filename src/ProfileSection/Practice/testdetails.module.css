@@ -1,0 +1,27 @@
+/*-----------------
+ Practice Page(Test-Box)
+--------------------*/
+.tabp{
+  color: #d4763b; 
+  margin-left: 24px;
+  cursor: pointer;
+}
+.tabp.active-tabs {
+  color: #643bd4;
+  border-color: #643bd4;
+  border-style: solid;
+  border-radius: 4px;
+  height: fit-content;
+  width:fit-content;
+  padding: 2px;
+}
+.card-img-top{
+  height:160px;
+}
+.card-title {
+  color: #0364bd;
+}
+
+/*-----------------
+ Practice End 
+--------------------*/

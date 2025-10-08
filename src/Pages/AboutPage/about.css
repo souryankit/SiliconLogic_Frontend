@@ -1,0 +1,735 @@
+/* About Page Components CSS Module */
+
+/* About Us Main Section */
+.word-container {
+  width: 36vw;
+  height: 36vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 28px;
+}
+
+.word-text {
+  font-size: 82px;
+  font-weight: bold;
+  color: rgb(84, 26, 111);
+  display: flex;
+}
+
+.word-letter {
+  display: inline-block;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.5s ease;
+}
+
+.word-letter.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.justify-text {
+  text-align: justify;
+  text-justify:inter-word;
+}
+
+/* Vision Section Background */
+.vision-bg {
+  background: url("/public/static_img/vision-bg3.jpg");
+  background-size: cover;
+  background-position: top;
+  background: cover;
+  opacity: 0.9;
+  height: 580px;
+}
+
+/* Value Box Section */
+.valuebox-bg {
+  background-image: linear-gradient(to bottom right, rgb(253, 253, 253), rgb(229, 211, 211));
+}
+
+.valuebox-bg .card {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.valuebox-bg .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.valuebox-bg .valuetext {
+  color: #6e7191;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.valuebox-bg .display-41 {
+  color: #211f54;
+  font-size: 42px;
+  line-height: 1.1em;
+  font-weight: 700;
+}
+
+/* About Page Cards and Display Elements */
+.card {
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.549);
+  box-shadow: 0 2px 10px 0 rgba(7, 94, 255, 0.086);
+}
+
+.display-3 {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.display-41 {
+  color: #211f54;
+  font-size: 42px;
+  line-height: 1.1em;
+  font-weight: 700;
+}
+
+.valuetext{
+  font-size: 16px;
+  font-weight: 360;
+}
+
+/* Margin and Padding Utilities */
+.mg-bottom-2px {
+  margin-bottom: 2px;
+}
+
+.mg-bottom-12px {
+  margin-bottom: 12px;
+}
+
+.mg-bottom-0 {
+  margin-bottom: 0px;
+}
+
+.color-neutral-600 {
+  color: #6e7191;
+}
+
+.max-w-48px-mbl {
+  max-width: 48px;
+}
+
+.max-w-48px-mbl.mg-bottom-32px {
+  margin-bottom: 24px;
+}
+
+.card.pd-44px---38px {
+  padding: 44px 38px;
+}
+
+.border-1px---neutral-300 {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #eff0f6;
+}
+
+/* About Page Sections */
+.section {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.position-relative---z-index-1 {
+  position: relative;
+  z-index: 1;
+}
+
+/* About Section Text */
+.about-section-text {
+  max-width: 600px;
+  color: #685f78;
+  text-align: justify;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* About Page Grid Layout */
+.grid-2-columns .display-4 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #211f54;
+  margin-bottom: 20px;
+}
+
+.grid-2-columns p {
+  font-size: 16px;
+  color: #6e7191;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.about-container {
+  max-width: 1320px;
+  margin-bottom: 4rem;
+  margin: auto;
+  
+}
+
+.about-page .subtitle {
+  color: #f33376;
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Club Section Styling */
+.club-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #211f54;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.club-description {
+  font-size: 16px;
+  color: #6e7191;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 20px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.club-content {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.club-content .row {
+  align-items: center;
+}
+
+.club-know-more {
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #5825e3 0%, #8b5cf6 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.club-know-more:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(88, 37, 227, 0.3);
+  color: white;
+  text-decoration: none;
+}
+
+.club-section {
+  padding: 60px 0;
+  background: #f8f9fa;
+}
+
+.club-image-container {
+  text-align: center;
+  position: relative;
+}
+/* About-club tabs*/
+.esd-icon {
+  background: url("/public/static_img/bg.jpg");
+}
+.hometab1 {
+  background: rgb(247, 247, 247);
+  color: #e80a42;
+  border-style: solid;
+  border-color: rgb(247, 247, 247);
+  height: 60px;
+  width: 400px;
+  border-radius: 12px;
+  text-align: center;
+  opacity: .7;
+}
+.hometab1:hover {
+  cursor: pointer;
+  border-color: #e80a42;
+  border-style: solid;
+  opacity: 1;
+}
+.hometab1.active-tab1 {
+  border-color: #e80a42;
+  border-style: solid;
+  opacity: 1;
+}
+.hometab2 {
+  background: rgb(247, 247, 247);
+  color: #27b3ea;
+  height: 60px;
+  width: 400px;
+  border-radius: 12px;
+  text-align: center;
+  border-style: solid;
+  border-color: rgb(247, 247, 247);
+  opacity: .7;
+}
+.hometab2:hover {
+  cursor: pointer;
+  border-style: solid;
+  border-color: #27b3ea;
+  color: #27b3ea;
+  opacity: 1;
+}
+.hometab2.active-tab2 {
+  border-style: solid;
+  border-color: #27b3ea;
+  color: #27b3ea;
+  opacity: 1;
+}
+.hometab3 {
+  border-style: solid;
+  border-color: rgb(247, 247, 247);
+  background: rgb(247, 247, 247);
+  color: #31E6B8;
+  height: 60px;
+  width: 400px;
+  border-radius: 12px;
+  text-align: center;
+  opacity: .7;
+}
+.hometab3:hover {
+  cursor: pointer;
+  border-style: solid;
+  border-color: #31E6B8;
+  opacity: 1;
+  color: #31E6B8;
+}
+.hometab3.active-tab3 {
+  border-style: solid;
+  border-color: #31E6B8;
+  color: #31E6B8;
+  opacity: 1;
+}
+.homecard {
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: 0 2px 15px 0 rgba(135, 29, 0, 0.189);
+  padding-bottom: 20px;
+  transition: 0.3s;
+}
+.homecard:hover {
+  transform: scale(1.015);
+  transform: translateY(-3px);
+}
+.imgcard {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.imgcard:hover {
+  transform: translateY(-5px);
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); */
+}
+.clubactivities {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:flex-start;
+}
+.clubactivities:hover {
+  transform: scale(1.015);
+  transform: translateY(0px);
+}
+.clubcontent {
+  background: "transparent";
+  padding: 40px;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.active-content {
+  display: block;
+}
+/* club tabs Hidden*/
+.content {
+  background-color: #ffffff;
+  padding: 40px;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+/* Ensure proper spacing between sections on About page */
+.about-container {
+  
+}
+
+/* Adjust subtitle size for About page */
+.about-page .subtitle {
+  font-size: 36px;
+  margin-bottom: 1.5rem;
+}
+
+/* Club Page Specific Styling */
+.club-name {
+  font-family: 'Poppins', sans-serif;
+  margin-top: 0px !important;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  font-weight: 700 !important;
+}
+
+.club-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px !important;
+  line-height: 1.8 !important;
+  font-weight: 400 !important;
+  color: #424242;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.club-content {
+  padding: 2rem 1.5rem;
+}
+
+.club-content .row {
+  align-items: center;
+}
+
+.club-know-more {
+  text-decoration: none;
+  font-size: 18px;
+  color: #7e22ce;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.club-know-more:hover {
+  color: #a855f7;
+  text-decoration: none;
+}
+
+.club-section {
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+}
+
+.club-image-container {
+  margin-top: 1rem;
+}
+
+.aboutimg{
+  width:40vw;
+  height:55vh;
+}
+
+
+.content{
+  padding: 40px;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: #fff;
+}
+
+.active-content{
+  display: block;
+}
+
+/*-------about end-----------*/
+
+/* Responsive Design for About Page */
+@media (max-width: 768px) {
+  .word-container {
+    width: 80vw;
+    height: 25vh;
+  }
+
+  .word-text {
+    font-size: 48px;
+  }
+
+  .vision-bg {
+    height: 400px;
+  }
+
+  .about-page .subtitle {
+    font-size: 28px;
+  }
+
+  .display-41 {
+    font-size: 32px;
+  }
+
+  .valuebox-bg .display-41 {
+    font-size: 28px;
+  }
+
+  .club-name {
+    font-size: 20px;
+  }
+
+  .club-content {
+    padding: 20px;
+  }
+
+  .card.pd-44px---38px {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .position-relative---z-index-1 {
+    position: relative;
+    height: 68vh;
+    z-index: 1;
+  }
+
+  .aboutimg{
+    left: -20vw;
+    width: 80vw;
+    height: 45vh;
+  }
+
+  .word-container {
+    width: 90vw;
+    height: 20vh;
+  }
+
+  .word-text {
+    font-size: 32px;
+  }
+
+  .vision-bg {
+    height: 300px;
+  }
+
+  .display-41 {
+    font-size: 24px;
+  }
+
+  .valuebox-bg .display-41 {
+    font-size: 22px;
+  }
+
+  .about-section-text {
+    font-size: 14px;
+  }
+
+  .club-description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .word-text {
+    font-size: 24px;
+  }
+
+  .about-page .subtitle {
+    font-size: 22px;
+  }
+
+  .display-3 {
+    font-size: 20px;
+  }
+
+  .club-content {
+    padding: 15px;
+  }
+
+  .club-know-more {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+/* About Values Responsive Sections */
+#aboutres p, #aboutres1 p {
+  font-size: 16px;
+  color: #6e7191;
+  line-height: 1.6;
+}
+
+#aboutvaluesres .display-3, #aboutvaluesres1 .display-3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #211f54;
+}
+
+#targetres .section-text {
+  font-size: 16px;
+  color: #6e7191;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+#targetres .section-text br {
+  margin-bottom: 10px;
+}
+
+/* Responsive adjustments for about sections */
+@media (max-width: 600px) {
+  #aboutres{
+    width: 90vw;
+    margin: 5vw;
+    padding: 10px;
+  }
+
+  #targetres{
+    width: 90vw;
+    margin: 0 5vw;
+  }
+
+  #targetres1{
+    width: 80vw;
+  }
+
+  #aboutres1{
+    width: 80vw;
+    margin: 5vw;
+  }
+
+  #aboutvalues{
+    display: block;
+    height: 50vh;
+  }
+
+  #aboutvaluesres{
+    height: 300vh;
+  }
+
+  #aboutvaluesres1{
+    height: 300vh;
+    top: -100vh;
+  }
+} 
+
+
+
+
+/*----------------
+ About Us Page
+ ------------------- */
+ /*
+ .word-container {
+  width: 36vw;
+  height: 36vh;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 28px;
+}
+.word-text {
+  font-size: 82px;
+  font-weight: bold;
+  color: rgb(84, 26, 111);
+  display: flex;
+}
+.word-letter {
+  display: inline-block;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.5s ease;
+}
+.word-letter.active {
+  opacity: 1;
+  transform: scale(1);
+}
+.justify-text {
+  text-align: justify;
+  text-justify:inter-word;
+  
+
+}
+.vision-bg {
+  background: url("/public/static_img/vision-bg3.jpg");
+  background-size: cover;
+  background-position: top;
+  background: cover;
+  opacity: 0.9;
+  height: 580px;
+}
+.valuebox-bg {
+  background-image: linear-gradient(to bottom right, rgb(253, 253, 253), rgb(229, 211, 211));
+}
+.card {
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.549);
+  box-shadow: 0 2px 10px 0 rgba(7, 94, 255, 0.086);
+}
+.display-3 {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+.display-41 {
+  color: #211f54;
+  font-size: 42px;
+  line-height: 1.1em;
+  font-weight: 700;
+}
+.valuetext{
+  font-size: 16px;
+  font-weight: 360;
+}
+.mg-bottom-2px {
+  margin-bottom: 2px;
+}
+.mg-bottom-12px {
+  margin-bottom: 12px;
+}
+.color-neutral-600 {
+  color: #6e7191;
+}
+.mg-bottom-0 {
+  margin-bottom: 0px;
+}
+.max-w-48px-mbl {
+  max-width: 48px;
+}
+.max-w-48px-mbl.mg-bottom-32px {
+  margin-bottom: 24px;
+}
+.max-w-48px-mbl {
+  max-width: 48px;
+}
+.card.pd-44px---38px {
+  padding: 44px 38px;
+}
+.border-1px---neutral-300 {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #eff0f6;
+}
+.section {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.position-relative---z-index-1 {
+  position: relative;
+  z-index: 1;
+}
+*/

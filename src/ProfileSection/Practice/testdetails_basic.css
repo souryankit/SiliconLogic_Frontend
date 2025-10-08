@@ -1,0 +1,223 @@
+
+/*  Test Result Details*/
+.resut-badge {
+    min-width: 60px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 4px 9px;
+    display: inline-block;
+    text-align: center;
+  }
+  .badge-light-danger {
+    background: #fff0f3;
+    border: 1px solid #ff4667;
+    color: #ff4667;
+  }
+  .badge-light-success {
+    background: #d0ffe1;
+    border: 1px solid #159f46;
+    color: #159f46;
+  }
+  .badge-light-warning {
+    background: #fff0cc;
+    border: 1px solid #ffb500;
+    color: #ffb500;
+  }
+  .status-badge {
+    border-radius: 5px;
+    padding: 6px 10px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .badge-soft-danger {
+    background: #fff0f3;
+    color: #ff4667;
+  }
+  .badge-soft-success {
+    background: #d0ffe1;
+    color: #159f46;
+  }
+  .badge-soft-warning {
+    background: #fff0cc;
+    color: #ffb500;
+  }
+  .quiz-table p {
+    margin-bottom: 5px;
+  }
+  .quiz-table p:last-child {
+    margin-bottom: 0;
+  }
+  .quiz-table p span {
+    font-weight: 500;
+  }
+  .btn-light-danger {
+    border: 1px solid #ff4667;
+    color: #ff4667;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+  }
+  .btn-light-danger:hover {
+    border: 1px solid #ff4667;
+    background: #ff4667;
+    color: #fff;
+  }
+  .quiz-view {
+    border: 1px solid #ff4667;
+    color: #ff4667;
+    padding: 5px 15px;
+    display: inline-block;
+    border-radius: 5px;
+  }
+  .table th,
+  .table td {
+    vertical-align: middle;
+    line-height: 1.462;
+    white-space: nowrap;
+  }
+  .custom-table {
+    border: 1px solid #f4f6f9;
+    border-radius: 5px;
+  }
+  .custom-table table th {
+    background: #f4f6f9;
+    font-weight: 500;
+    color: #685f78;
+    padding: 15px 10px;
+    border-color: #f4f6f9;
+  }
+  .custom-table table td {
+    color: #685f78;
+    padding: 15px 10px;
+  }
+  .custom-table table td {
+    border-color: #f4f6f9;
+  }
+  .quiz-del {
+    color: #685f78;
+  }
+  .quiz-details {
+    margin-bottom: 14px;
+  }
+  .quiz-details .back-link {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    color: #685f78;
+    margin-bottom: 10px;
+  }
+  .quiz-details .back-link i {
+    margin-right: 5px;
+  }
+  .quiz-details p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .quiz-details h6 {
+    color: #002058;
+    margin-bottom: 10px;
+  }
+  .quiz-details ul {
+    padding: 0;
+  }
+  .quiz-details ul li {
+    font-size: 14px;
+    color: #685f78;
+    display: inline-block;
+    margin: 0 15px 15px 0;
+  }
+  .quiz-details ul li:last-child {
+    margin-right: 0;
+  }
+  .quiz-overview h6 {
+    color: #685f78;
+    font-weight: 400;
+    margin-bottom: 24px;
+  }
+  .table-quiz {
+    margin-bottom: 24px;
+  }
+  .action-icon {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    width: 40px;
+    height: 40px;
+    color: #685f78;
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+  }
+  .action-icon:hover {
+    background: #ff4667;
+    border-color: #ff4667;
+    color: #fff;
+  }
+  .title-course {
+    width: 280px;
+    white-space: normal;
+    display: block;
+  }
+  .wishlist-tab.order-tab ul li a {
+    min-width: 100px;
+    text-align: center;
+  }
+  .table-avatar {
+    font-size: 16px;
+  }
+  .table-avatar a.avatar img {
+    border-radius: 50%;
+  }
+  .table-avatar a.avatar {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  .table-avatar a {
+    color: #685f78;
+  }
+  .table-avatar a:hover {
+    color: #ff4667;
+  }
+  .table-view a {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    color: #685f78;
+    font-weight: 500;
+  }
+  .table-view a i {
+    margin-right: 8px;
+  }
+  .table-view a:hover {
+    color: #ff4667;
+  }
+  .icon-form {
+    position: relative;
+  }
+  .icon-form .form-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #685f78;
+  }
+  .icon-form .form-control {
+    border-color: #e9ecef;
+    padding-left: 30px;
+  }
+  .profile-heading .icon-form {
+    margin-bottom: 5px;
+  }
